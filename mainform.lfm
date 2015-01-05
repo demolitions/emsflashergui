@@ -1,0 +1,159 @@
+object MainForm: TMainForm
+  Left = 236
+  Height = 227
+  Top = 113
+  Width = 432
+  BorderStyle = bsSingle
+  Caption = 'ems-flasher-gui'
+  ClientHeight = 227
+  ClientWidth = 432
+  OnActivate = FormActivate
+  OnCreate = FormCreate
+  Position = poDesktopCenter
+  LCLVersion = '1.2.6.0'
+  object bank1Rom_txt: TEdit
+    Left = 256
+    Height = 27
+    Top = 128
+    Width = 171
+    ParentShowHint = False
+    ReadOnly = True
+    ShowHint = True
+    TabOrder = 0
+  end
+  object bank1Rom_lbl: TLabel
+    Left = 256
+    Height = 17
+    Top = 104
+    Width = 66
+    Caption = 'Bank 1 ROM'
+    ParentColor = False
+  end
+  object bank2Rom_lbl: TLabel
+    Left = 256
+    Height = 17
+    Top = 168
+    Width = 66
+    Caption = 'Bank 2 ROM'
+    ParentColor = False
+  end
+  object scanEMS_btn: TButton
+    Left = 8
+    Height = 85
+    Top = 100
+    Width = 240
+    Caption = 'Scan EMS'
+    OnClick = scanEMS_btnClick
+    TabOrder = 2
+  end
+  object flashBank1_btn: TButton
+    Left = 8
+    Height = 39
+    Top = 8
+    Width = 97
+    Caption = 'Flash ROM 1'
+    OnClick = flashBank1_btnClick
+    TabOrder = 3
+  end
+  object flashBank2_btn: TButton
+    Left = 8
+    Height = 39
+    Top = 56
+    Width = 97
+    Caption = 'Flash ROM 2'
+    OnClick = flashBank2_btnClick
+    TabOrder = 4
+  end
+  object flashSave1_btn: TButton
+    Left = 222
+    Height = 39
+    Top = 8
+    Width = 97
+    Caption = 'Flash Save 1'
+    OnClick = flashSave1_btnClick
+    TabOrder = 5
+  end
+  object flashSave2_btn: TButton
+    Left = 222
+    Height = 39
+    Top = 56
+    Width = 97
+    Caption = 'Flash Save 2'
+    OnClick = flashSave2_btnClick
+    TabOrder = 6
+  end
+  object dumpBank2_btn: TButton
+    Left = 115
+    Height = 39
+    Top = 56
+    Width = 97
+    Caption = 'Read ROM 2'
+    OnClick = dumpBank2_btnClick
+    TabOrder = 7
+  end
+  object dumpSave2_btn: TButton
+    Left = 329
+    Height = 39
+    Top = 56
+    Width = 97
+    Caption = 'Read Save 2'
+    OnClick = dumpSave2_btnClick
+    TabOrder = 8
+  end
+  object dumpBank1_btn: TButton
+    Left = 115
+    Height = 39
+    Top = 8
+    Width = 97
+    Caption = 'Read ROM 1'
+    OnClick = dumpBank1_btnClick
+    TabOrder = 9
+  end
+  object dumpSave1_btn: TButton
+    Left = 329
+    Height = 39
+    Top = 8
+    Width = 97
+    Caption = 'Read Save 1'
+    OnClick = dumpSave1_btnClick
+    TabOrder = 10
+  end
+  object bank2Rom_txt: TEdit
+    Left = 256
+    Height = 27
+    Top = 192
+    Width = 171
+    ReadOnly = True
+    TabOrder = 1
+  end
+  object emsStatus_shp: TShape
+    Left = 8
+    Height = 27
+    Top = 192
+    Width = 40
+  end
+  object emsStatus_lbl: TLabel
+    Left = 56
+    Height = 17
+    Top = 200
+    Width = 58
+    Caption = 'EMS status'
+    ParentColor = False
+  end
+  object saveDlg: TSaveDialog
+    InitialDir = '.'
+    left = 368
+    top = 160
+  end
+  object openDlg: TOpenDialog
+    InitialDir = '.'
+    left = 400
+    top = 160
+  end
+  object Timer1: TTimer
+    Enabled = False
+    OnTimer = Timer1Timer
+    left = 400
+    top = 96
+  end
+end

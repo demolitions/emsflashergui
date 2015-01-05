@@ -1,0 +1,22 @@
+object msgForm: TmsgForm
+  Left = 254
+  Height = 303
+  Top = 344
+  Width = 639
+  Caption = 'Messages'
+  ClientHeight = 303
+  ClientWidth = 639
+  OnCreate = FormCreate
+  Position = poMainFormCenter
+  LCLVersion = '1.2.6.0'
+  object msgMemo: TMemo
+    Left = 8
+    Height = 288
+    Top = 8
+    Width = 624
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    ReadOnly = True
+    ScrollBars = ssAutoBoth
+    TabOrder = 0
+  end
+end
